@@ -40,20 +40,20 @@ This is a simple User Management API built using Node.js, Express, and MongoDB. 
    ```bash
    MONGODB_URI=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret
-   PORT=3000
+   PORT=3001
    ```
 4. **Start the Server:**
    ```bash
    npm run dev
    ```
-   The server should be running on http://localhost:PORT.
+   The server should be running on http://localhost:3001.
 
 ## API Endpoints
 
 1. **Register a New User**
 
    - Method: POST
-   - URL: http://localhost:PORT/register
+   - URL: http://localhost:3001/register
    - Body:
 
    ```bash
@@ -68,7 +68,7 @@ This is a simple User Management API built using Node.js, Express, and MongoDB. 
 2. **Login a User**
 
    - Method: POST
-   - URL: http://localhost:PORT/login
+   - URL: http://localhost:3001/login
    - Body:
 
    ```bash
@@ -84,12 +84,12 @@ This is a simple User Management API built using Node.js, Express, and MongoDB. 
 3. **Get All Users**
 
    - Method: GET
-   - URL: http://localhost:PORT/getUsers
+   - URL: http://localhost:3001/getUsers
 
 4. **Update a User**
 
    - Method: PUT
-   - URL: http://localhost:PORT/updateUser/<USER_ID>
+   - URL: http://localhost:3001/updateUser/<USER_ID>
    - Body:
      ```bash
         {
@@ -104,11 +104,10 @@ This is a simple User Management API built using Node.js, Express, and MongoDB. 
 5. **Get All Users**
 
    - Method: GET
-   - URL: http://localhost:PORT/deleteUser/<USER_ID>
+   - URL: http://localhost:3001/deleteUser/<USER_ID>
 
 ## Running Tests
 
-````bash
+```bash
     npm run test
-  ```
-````
+```
