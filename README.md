@@ -1,39 +1,114 @@
-# DFB-App
+# User Management API
 
-## Description
+This is a simple User Management API built using Node.js, Express, and MongoDB. It provides basic functionalities such as registering users, logging in, updating user details, retrieving all users, and deleting users. The API also includes JWT-based authentication.
 
-DFB-App is a Dynamic Form Builder. This application aims to Make customizable forms for convinience.
+## Features
+
+- User Registration
+- User Login
+- JWT Authentication
+- CRUD Operations (Create, Read, Update, Delete)
+
+## Technologies Used
+
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- JSON Web Token (JWT)
+- bcrypt.js for password hashing
 
 ## Prerequisites
 
-Before you begin, ensure you have the following installed on your system:
-
-- [Node.js](https://nodejs.org/en/download/)
-- [npm](https://www.npmjs.com/get-npm) (comes with Node.js)
-- [Git](https://git-scm.com/downloads)
+- Node.js (v14 or higher)
+- MongoDB (v4 or higher)
+- npm (v6 or higher)
 
 ## Installation
 
-1. **Clone the repository:**
+1. **Clone the Repository:**
+
    ```bash
-   git clone https://github.com/Belllum/DFB-App.git
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
    ```
-2. **Navigate to the project directory:**
-   ```bash
-   cd DFB-App
-   ```
-3. **Install dependencies:**
+
+2. **Install Dependencies:**
    ```bash
    npm install
    ```
-
-## Running the App
-
-1. **Start the development server**
+3. **Set Up Environment Variables:**
    ```bash
-   npm start
+   MONGODB_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
+   PORT=3000
    ```
-2. **Open your browser and navigate to:**
+4. **Start the Server:**
    ```bash
-   http://localhost:3000
+   npm run dev
    ```
+   The server should be running on http://localhost:PORT.
+
+## API Endpoints
+
+1. **Register a New User**
+
+   - Method: POST
+   - URL: http://localhost:PORT/register
+   - Body:
+
+   ```bash
+      {
+   "first_name": "John",
+   "last_name": "Doe",
+   "email": "johndoe@example.com",
+   "password": "password123"
+      }
+   ```
+
+2. **Login a User**
+
+   - Method: POST
+   - URL: http://localhost:PORT/login
+   - Body:
+
+   ```bash
+      {
+   "email": "johndoe@example.com",
+   "password": "password123"
+      }
+   ```
+
+   - Response:
+     - A JWT token will be returned on successful login.
+
+3. **Get All Users**
+
+   - Method: GET
+   - URL: http://localhost:PORT/getUsers
+
+4. **Update a User**
+
+   - Method: PUT
+   - URL: http://localhost:PORT/updateUser/<USER_ID>
+   - Body:
+     ```bash
+        {
+     "first_name": "Jane",
+     "last_name": "Doe",
+     "email": "janedoe@example.com",
+     "password": "newpassword123",
+     "status": false
+        }
+     ```
+
+5. **Get All Users**
+
+   - Method: GET
+   - URL: http://localhost:PORT/deleteUser/<USER_ID>
+
+## Running Tests
+
+````bash
+    npm run test
+  ```
+````
