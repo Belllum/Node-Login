@@ -28,8 +28,8 @@ This is a simple User Management API built using Node.js, Express, and MongoDB. 
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/Belllum/Node-Login
+   cd Node-Login
    ```
 
 2. **Install Dependencies:**
