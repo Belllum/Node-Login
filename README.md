@@ -101,7 +101,7 @@ This is a simple User Management API built using Node.js, Express, and MongoDB. 
         }
      ```
 
-5. **Get All Users**
+5. **Delete a User**
 
    - Method: GET
    - URL: http://localhost:3001/deleteUser/<USER_ID>
